@@ -1,0 +1,420 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* montserrat-500 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* montserrat-600 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/raleway-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* raleway-600 - latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/raleway-v19-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway-v19-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* raleway-700 - latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/raleway-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+    
+/* Générique */
+
+
+:root {
+    --backG: #FD7E37;
+    --textW: #fff;
+    --textB: #331100;
+    
+}
+
+
+body {
+
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Raleway';
+    background-color: #110f13;
+    
+}
+
+
+/* Layout */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    
+}
+
+@media screen and (min-width: 36em) { /* Indiquer les mesures en em avec une base de 16px - Ex : 576/16 = 36em*/
+    .container {
+        max-width: 53.6rem;
+    }
+}
+
+@media screen and (min-width: 48em) { /* eq 768px */
+    .container {
+        max-width: 72.8rem;
+    }
+}
+
+@media screen and (min-width: 62em) { /* eq 992px */
+    .container {
+        max-width: 95.2rem;
+    }
+}
+
+@media screen and (min-width: 75em) { /* eq 1200px */
+    .container {
+        max-width: 190.6rem;
+    }
+}
+
+
+
+form{
+    display: flex;
+    gap: 1rem;
+    width: 70rem;
+}
+
+main{
+    position: relative;
+    padding: 16px;
+}
+
+/* Header */
+.real-header > .container{
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header{
+    background-color: #2D1440;
+    padding: 2rem;
+
+}
+.zone-info-res{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.link-logo{
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.btnSearch{
+    min-width: 15rem;
+   
+}
+.selectOption{
+    min-width: 15rem;
+    border: 0;
+    
+}
+.barSearch{
+    min-width: 38rem;
+    max-width: 28rem;
+    padding: .5rem;
+    border: 0;
+    
+
+}
+/* header option */
+.contain-option{
+    padding: .5rem 1.6rem;
+    background-color: #2D1440;
+}
+.list-option{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #f799fa;
+    text-shadow: 1px 1px 2px #110f13;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 400;
+    
+    
+}
+.sticky{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a0d24;
+}
+.sticky + main{
+    padding-top: 7rem;
+}
+
+
+
+
+.item-option{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.list-result{
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin-top: 2rem;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    display: grid;
+    grid-template: 1fr / repeat(5,1fr);
+    text-align: center;
+    background-color: #2b2033;
+}
+
+
+.item-res{
+    border: .2rem solid #912bdf;
+    border-style: none solid none solid;
+}
+.hide-msg{
+    display: none;
+}
+
+.msg-hide,.zero-res,.pb-res{
+    margin-top: 1rem;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    background-color:#2b2033 ;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    color: #fff;
+    z-index: 20;
+    position: absolute;
+}
+
+
+.divBtn{
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+.btnShowResult{
+    display: none;
+}
+.BtnAppear{
+    display: flex;
+}
+
+.valueResearch{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+.CountResult{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.modal-contain{
+    position: fixed;
+    z-index: 10;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    
+}
+.cover-visible{
+    visibility: visible;
+    opacity: 1;
+}
+.zone-modal{
+
+    background-color: #652894;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style: none;
+    overflow: auto;
+   
+}
+.item-mod{
+    padding: 1rem;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(245, 219, 253);
+    text-shadow: .1rem .1rem .1rem rgb(0, 0, 0);
+}
+
+
+.Title-modal{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 600;
+    color: rgb(245, 219, 253);
+    text-shadow: .1rem .1rem .1rem rgb(0, 0, 0);
+}
+.zoneImgCov{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill,30rem);
+    grid-gap: 4rem;
+    justify-content: center;
+    height: 30%;
+}
+.btnCloseMod{
+    position: fixed;
+    top: 7rem;
+    right: 12rem;
+}
+
+.loading{
+    background-color: #110f13;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.lettre{
+    color: #484848;
+    font-size: 8rem;
+    letter-spacing: 1.5rem;
+    animation: flash 1.2s linear infinite;
+   
+}
+@keyframes flash {
+    0%{
+        color: #48ffe7;
+        text-shadow: 0 0 0.7rem #48ffe7;
+    }
+    90%{
+        color: #454545;
+        text-shadow: none;
+    }
+    100%{
+        color: #48ffe7;
+        text-shadow: 0 0 0.7rem #48ffe7;
+    }
+
+}
+
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay: 1s;
+}
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+

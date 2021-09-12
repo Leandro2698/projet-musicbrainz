@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECF JavaScript</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/helpers.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <section class="real-header">
+            <div class="container">
+                <div class="logo-header">
+                    <a class="link-logo" href="index.html">Letlis<img src="img/logo.svg" alt="logo de letlis"></a>
+
+                </div>
+
+                <form id="formSearch">
+                    <input class="barSearch" type="search" id="barSearch" aria-label="Search through site content"
+                        placeholder="Artist/Album/Titre" minlength="1" required>
+                    <select class="selectOption" name="categories" id="selectOption">
+                        <option class="optionCat" value="everything">Tous</option>
+                        <option class="optionCat" value="artist">Artist</option>
+                        <option class="optionCat" value="title">Titre</option>
+                        <option class="optionCat" value="album">Album</option>
+                    </select>
+                    <button class="btnSearch" type="submit" id="btnSearch">Recherche</button>
+                </form>
+
+
+
+            </div>
+
+            <div class="zone-info-res">
+                <h1 class="valueResearch"></h1>
+                <p class="CountResult"></p>
+            </div>
+
+
+        </section>
+
+    </header>
+
+    <div class="contain-option" id="myOptions">
+        <ul class="list-option" role="list">
+            <li class="item-option">
+                <p>#</p>
+            </li>
+            <li class="item-option">
+                <p>Artist</p>
+            </li>
+            <li class="item-option">
+                <p>TItre</p>
+            </li>
+            <li class="item-option">
+                <p>Album</p>
+            </li>
+            <li class="item-option">
+                <p>Info</p>
+            </li>
+
+
+        </ul>
+    </div>
+
+    <main>
+        <section class="result">
+
+
+            <div class="container">
+                <div class="load" hidden>
+                    <div class="loading" hidden>
+                        <span class="lettre">C</span>
+                        <span class="lettre">H</span>
+                        <span class="lettre">A</span>
+                        <span class="lettre">R</span>
+                        <span class="lettre">G</span>
+                        <span class="lettre">E</span>
+                        <span class="lettre">M</span>
+                        <span class="lettre">E</span>
+                        <span class="lettre">N</span>
+                        <span class="lettre">T</span>
+                    </div>
+                </div>
+
+
+                <div>
+                    <p id="msgHide" class="msg-hide">Entrez un élement de recherche</p>
+                </div>
+                <div>
+                    <p id="zeroRes">Aucun resultat trouvé, entrez un nouvel élement de recherche</p>
+                </div>
+                <div>
+                    <p id="pbRes" class="hide-msg">Un problème est survenu veuillez ressayer plus tard ou contacter
+                        notre service technique</p>
+                </div>
+
+                <div id="contain-result" class="contain-res">
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <div class="divBtn">
+            <button class="btnShowResult">Afficher plus de resultat </button>
+        </div>
+
+
+        <div class="modal-contain">
+
+            <ul class="zone-modal">
+                <h1 class="Title-modal">INFORMATION</h1>
+
+                <li class="item-mod">
+
+                    <button class="btnCloseMod">Fermer</button>
+                </li>
+
+
+                <li class="item-mod">
+
+                    <p class="modal-title"></p>
+                </li>
+
+                <li class="item-mod">
+
+                    <p class="modal-artist"></p>
+                </li>
+                <li class="item-mod">
+
+                    <p class="modal-album"> </p>
+                </li>
+
+
+                <li class="item-mod">
+
+                    <p class="modal-tag"> </p>
+                </li>
+
+                <li class="item-mod">
+
+                    <p class="modal-length"> </p>
+                </li>
+
+                <li class="item-mod">
+
+                    <p class="modal-score"></p>
+                </li>
+                <li class="item-mod">
+                    <h2 class="title-cover"></h2>
+                </li>
+                <li class="zoneImgCov">
+
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+
+
+    <script src="js/sticky.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+
+</html>
